@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="autolayout_stackview_tuturial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="view" customModule="autolayout_stackview_tuturial" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fe6-2G-qfR">
+                                <rect key="frame" x="35" y="244" width="340" height="460"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SJV-ia-xl3">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="460"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nej-zr-QAy">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="dVf-9a-zel"/>
+                                                    <constraint firstAttribute="width" constant="100" id="hBT-B4-iXc"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-YN-uil">
+                                                <rect key="frame" x="0.0" y="120" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="txT-m5-1wL"/>
+                                                    <constraint firstAttribute="height" constant="100" id="wur-hM-JLG"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-na-NsA">
+                                                <rect key="frame" x="0.0" y="240" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="aSa-k3-Mjb"/>
+                                                    <constraint firstAttribute="width" constant="100" id="g7k-5o-K5b"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fS-0n-LhC">
+                                                <rect key="frame" x="0.0" y="360" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="0j6-gT-QS9"/>
+                                                    <constraint firstAttribute="height" constant="100" id="zU8-gN-nx0"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="*">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uO9-2n-AmJ">
+                                        <rect key="frame" x="120" y="0.0" width="100" height="460"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6Y-0A-qwt">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="3dc-6L-Rbo"/>
+                                                    <constraint firstAttribute="height" constant="100" id="CfL-wi-waf"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqT-WR-8Jg">
+                                                <rect key="frame" x="0.0" y="120" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="rbq-dm-IEf"/>
+                                                    <constraint firstAttribute="width" constant="100" id="xGV-NC-2Vm"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSN-dv-eB3">
+                                                <rect key="frame" x="0.0" y="240" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="2tm-nN-BMB"/>
+                                                    <constraint firstAttribute="width" constant="100" id="a4R-VI-VYv"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-Ji-FXC">
+                                                <rect key="frame" x="0.0" y="360" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="JM1-PV-XBJ"/>
+                                                    <constraint firstAttribute="width" constant="100" id="ZCy-18-4Jl"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="0">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bSb-mH-fKJ">
+                                        <rect key="frame" x="240" y="0.0" width="100" height="460"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRV-ye-8DS">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="PLF-ah-A75"/>
+                                                    <constraint firstAttribute="height" constant="100" id="Rir-xc-fdS"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TO-N4-nbX">
+                                                <rect key="frame" x="0.0" y="120" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="iWf-Sw-1Tw"/>
+                                                    <constraint firstAttribute="height" constant="100" id="ijs-7z-6zb"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQK-a0-PS4">
+                                                <rect key="frame" x="0.0" y="240" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="G0G-Mt-baA"/>
+                                                    <constraint firstAttribute="width" constant="100" id="L3x-zP-vlD"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xp-zn-IgE">
+                                                <rect key="frame" x="0.0" y="360" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Mfc-NF-COu"/>
+                                                    <constraint firstAttribute="width" constant="100" id="SZ2-LL-qJu"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="#">
+                                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jh-Tt-A2R" userLabel="Call">
+                                <rect key="frame" x="157" y="713" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="A0s-Rj-SQ6"/>
+                                    <constraint firstAttribute="width" constant="100" id="mht-Tl-zWH"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="1"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="phone.fill" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background" cornerRadius="70">
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30" scale="default"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호를 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8HH-C1-zOV" userLabel="InputNum">
+                                <rect key="frame" x="50" y="94" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="d93-ji-Ocg"/>
+                                    <constraint firstAttribute="height" constant="50" id="xrb-Gp-HpV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8HH-C1-zOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="1IM-Ig-sRv"/>
+                            <constraint firstItem="fe6-2G-qfR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Pki-np-6gV"/>
+                            <constraint firstItem="8HH-C1-zOV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Q8s-dk-NgM"/>
+                            <constraint firstItem="fe6-2G-qfR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Sgs-8W-8LF"/>
+                            <constraint firstItem="3jh-Tt-A2R" firstAttribute="top" secondItem="fe6-2G-qfR" secondAttribute="bottom" constant="9" id="gem-bg-Tkf"/>
+                            <constraint firstItem="3jh-Tt-A2R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="q6h-fj-Odn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputNum" destination="8HH-C1-zOV" id="OXr-5a-w55"/>
+                        <outlet property="phoneCallBtn" destination="3jh-Tt-A2R" id="LUn-EI-wBi"/>
+                        <outletCollection property="phoneNumberBtns" destination="Nej-zr-QAy" collectionClass="NSMutableArray" id="wuY-XJ-yVI"/>
+                        <outletCollection property="phoneNumberBtns" destination="d6Y-0A-qwt" collectionClass="NSMutableArray" id="0El-Sy-5uL"/>
+                        <outletCollection property="phoneNumberBtns" destination="NRV-ye-8DS" collectionClass="NSMutableArray" id="tcs-ef-3oO"/>
+                        <outletCollection property="phoneNumberBtns" destination="A5M-YN-uil" collectionClass="NSMutableArray" id="wzN-Ta-tST"/>
+                        <outletCollection property="phoneNumberBtns" destination="zqT-WR-8Jg" collectionClass="NSMutableArray" id="x1q-Ml-0KX"/>
+                        <outletCollection property="phoneNumberBtns" destination="5TO-N4-nbX" collectionClass="NSMutableArray" id="frv-cz-PMD"/>
+                        <outletCollection property="phoneNumberBtns" destination="iYh-na-NsA" collectionClass="NSMutableArray" id="P8U-ts-xGa"/>
+                        <outletCollection property="phoneNumberBtns" destination="ZSN-dv-eB3" collectionClass="NSMutableArray" id="SUw-Ga-amU"/>
+                        <outletCollection property="phoneNumberBtns" destination="cQK-a0-PS4" collectionClass="NSMutableArray" id="YrF-We-B9a"/>
+                        <outletCollection property="phoneNumberBtns" destination="9fS-0n-LhC" collectionClass="NSMutableArray" id="k1P-hA-3wg"/>
+                        <outletCollection property="phoneNumberBtns" destination="Wwj-Ji-FXC" collectionClass="NSMutableArray" id="Rcn-4f-HMV"/>
+                        <outletCollection property="phoneNumberBtns" destination="8xp-zn-IgE" collectionClass="NSMutableArray" id="vfX-NW-w8l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="66"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
