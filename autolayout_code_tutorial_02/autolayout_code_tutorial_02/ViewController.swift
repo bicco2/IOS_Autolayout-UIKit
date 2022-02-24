@@ -1,25 +1,14 @@
-//
-//  ViewController.swift
-//  autolayout_code_tutorial_02
-//
-//  Created by 진호병 on 2022/02/23.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
     
     var bottomContant : NSLayoutConstraint?
 
-//    var testLabel : UILabel = {
-//       let label1 = UILabel()
-//        label1.backgroundColor = .white
-//        label1.layer.cornerRadius = 10
-//        label1.translatesAutoresizingMaskIntoConstraints = false
-//        return label1
-//    }()
     override func loadView() {
         super.loadView()
+        
+        view.backgroundColor = UIColor(named: "MyYellow")
+        
         print("loadView_print")
         
         let btnView = UIView()
@@ -65,7 +54,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor(named: "MyYellow")
+     
     
         
         
@@ -114,8 +103,6 @@ struct ViewController_Previews: PreviewProvider{
             .previewDisplayName("응애폰")
     }
 }
-
-
 #endif
 
 
