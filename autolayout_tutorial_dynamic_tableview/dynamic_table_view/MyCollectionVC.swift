@@ -34,7 +34,7 @@ class MyCollectionVC: UIViewController {
         
         // 사용할 콜렉션뷰 쎌을 등록
         //
-//        let myCustomCollectionViewCellNib = UINib(nibName: "MyCustomCollectionViewCell", bundle: nil)
+        //let myCustomCollectionViewCellNib = UINib(nibName: "MyCustomCollectionViewCell", bundle: nil)
         // 닙파일을 가져온다
         let myCustomCollectionViewCellNib = UINib(nibName: String(describing: MyCustomCollectionViewCell.self), bundle: nil)
         
@@ -212,6 +212,8 @@ extension MyCollectionVC: UICollectionViewDataSource {
         
         cell.imageName = self.systemImageNameArray[indexPath.item]
         
+        
+        //MyCustomCollectionViewCell.swift에서 돌림(217~227)
 //        cell.contentView.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
 //        cell.contentView.layer.cornerRadius = 8
 //        cell.contentView.layer.borderWidth = 1
@@ -222,7 +224,7 @@ extension MyCollectionVC: UICollectionViewDataSource {
 //        cell.profileImg.image = UIImage(systemName: self.systemImageNameArray[indexPath.item])
 //        // 라벨 설정
 //        cell.profileLabel.text = self.systemImageNameArray[indexPath.item]
-        
+//
         return cell
     }
     

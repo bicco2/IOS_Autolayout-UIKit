@@ -30,6 +30,8 @@ class MyCustomCollectionViewCell: UICollectionViewCell {
         self.contentView.layer.cornerRadius = 8
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        //#colorLiteral(red: 0.292, green: 0.081, blue: 0.6, alpha: 255)
+ 
     }
     
 }
