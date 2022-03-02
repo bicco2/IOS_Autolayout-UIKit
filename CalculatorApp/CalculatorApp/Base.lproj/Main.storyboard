@@ -222,14 +222,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGQ-Tq-tYL">
+                                <rect key="frame" x="72" y="714" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="PWV-Am-eYR"/>
+                                    <constraint firstAttribute="width" constant="100" id="YOK-xz-FDP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="⎷">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oHi-f1-k5g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zjn-vd-YYn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="83n-ca-qHG"/>
                             <constraint firstItem="zjn-vd-YYn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="IJh-it-1sV"/>
+                            <constraint firstItem="kGQ-Tq-tYL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="L2s-2r-aA0"/>
                             <constraint firstItem="zjn-vd-YYn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RPG-Eu-42J"/>
                             <constraint firstItem="Qxb-cZ-x7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMc-RV-3ez"/>
+                            <constraint firstItem="kGQ-Tq-tYL" firstAttribute="top" secondItem="Qxb-cZ-x7Z" secondAttribute="bottom" constant="43" id="Zcp-eI-NCz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zjn-vd-YYn" secondAttribute="trailing" constant="30" id="paP-M3-zL4"/>
                             <constraint firstItem="Qxb-cZ-x7Z" firstAttribute="top" secondItem="zjn-vd-YYn" secondAttribute="bottom" constant="100" id="rdI-od-Xqb"/>
                         </constraints>

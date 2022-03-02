@@ -27,11 +27,24 @@ class ViewController: UIViewController {
         userIsInTheMiddleOfTyping = true
     }
     
+    var inputValue: Double{
+        get{
+            return Double(inputNum.text!)! //여기서 !를 쓰는 이유는 inputNum.text!가 항상 double를 리턴 하는게 아니여서 값을 모를 수가 있기 때문이다 . 따라서 !를 삽입해 강제 추출을 함
+        }
+        set{
+            inputNum.text =  String(newValue) //newValue는 누군가 set한 double타입의 값임
+            //그리고 inputNum.text는 string이기 떄문에 형변환ㄱ ㄱ
+        }
+    }
+    
     @IBAction func performOperation(_ sender: UIButton) {
         userIsInTheMiddleOfTyping = false
         if let mathmaticalSymbol = sender.currentTitle{
             if mathmaticalSymbol == "π"{
-                inputNum.text = String(M_PI)
+                inputValue = M_PI
+                // == inputNum.text = String(M_PI)
+            } else if mathmaticalSymbol == "⎷" {
+                inputValue = sqrt(inputValue)
             }
         }
     }
