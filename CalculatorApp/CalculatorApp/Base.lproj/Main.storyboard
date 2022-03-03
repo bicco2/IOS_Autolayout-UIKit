@@ -252,7 +252,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="inputNum" destination="zjn-vd-YYn" id="V9V-ND-diR"/>
+                        <outlet property="display" destination="zjn-vd-YYn" id="1an-Wo-wc2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
