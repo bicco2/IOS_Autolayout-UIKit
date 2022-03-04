@@ -7,13 +7,25 @@ class CalculatorBrain{ //base class
         accumulator = operand
     }
     
+    var operations: Dictionary<String, Double> = [
+        "π" : M_PI,
+        "e" : M_E,
+        "√" : sqrt,
+        "cos" : cos
+    ]
      
+    // enum은 메소드를 가질 수 있다. 하지만 변수를 가질 수 없다 .(계산 변수 ㅇ 저장변수 x) 또한 상속도 불가하다.
+//    enum Operation {
+//        case Constant
+//        case UnaryOperation
+//        case BinaryOperation
+//        case Equals
+//
+//    }
     
     func performOperation(symbol:String){
-        switch symbol{
-            case "π" : accumulator = M_PI
-            case "⎷" : accumulator = sqrt(accumulator)
-            default : break
+        if let constant = operations[symbol]{//if를 사용함으로써 옵셔널을 방지할 수 있음 if 안쓰면 밑에 constant에 ! 써야함
+            accumulator = constant
         }
     }
     
@@ -23,3 +35,6 @@ class CalculatorBrain{ //base class
         }
     }
 }
+
+
+//⎷
