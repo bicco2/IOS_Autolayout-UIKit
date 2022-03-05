@@ -1,5 +1,9 @@
 import Foundation
 
+func multiply(op1 : Double, op2 : Double) -> Double {
+    return op1 * op2
+}
+
 class CalculatorBrain{ //base class
     private var accumulator: Double = 0.0 //결과 누적 변수
     
@@ -11,14 +15,16 @@ class CalculatorBrain{ //base class
         "π" : Operation.Constant(M_PI),
         "e" : Operation.Constant(M_E),
         "√" : Operation.UnaryOperation(sqrt),
-        "cos" : Operation.UnaryOperation(cos)
+        "cos" : Operation.UnaryOperation(cos),
+        "*" : Operation.BinaryOperation(multiply),
+        "=" : Operation.Equals
     ]
      
     // enum은 메소드를 가질 수 있다. 하지만 변수를 가질 수 없다 .(계산 변수 ㅇ 저장변수 x) 또한 상속도 불가하다.
     enum Operation {
         case Constant(Double) //여기서 (double)은 연관값을 말하는데 이게 있어야 값을 받을 수 있음
         case UnaryOperation((Double) -> Double) //이게 단항 연산의 연관 값인 함수임 ((Double) -> Double)
-        case BinaryOperation
+        case BinaryOperation((Double, Double) -> Double)
         case Equals
 
     }
@@ -28,10 +34,21 @@ class CalculatorBrain{ //base class
             switch operation { //왜 여기 switch는 default가 필요 없나 => operation 자체에 값이 4개만 존재하기 떄문에
                 case .Constant(let value): accumulator = value
                 case .UnaryOperation(let funcSqrt): accumulator = funcSqrt(accumulator)
-                case .BinaryOperation: break
-                case .Equals: break
+                case .BinaryOperation(let function): pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
+                case .Equals:
+                    if pending != nil {
+                        accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
+                        pending = nil
+                    }
             }
         }
+    }
+    
+    private var pending: PendingBinaryOperationInfo?
+    
+    struct PendingBinaryOperationInfo{
+        var binaryFunction: (Double, Double) -> Double
+        var firstOperand: Double
     }
     
     //흐름 설명
