@@ -1,8 +1,8 @@
 import Foundation
 
-func multiply(op1 : Double, op2 : Double) -> Double {
-    return op1 * op2
-}
+//func multiply(op1 : Double, op2 : Double) -> Double {
+//    return op1 * op2
+//}
 
 class CalculatorBrain{ //base class
     private var accumulator: Double = 0.0 //결과 누적 변수
@@ -11,17 +11,26 @@ class CalculatorBrain{ //base class
         accumulator = operand
     }
     
-    var operations: Dictionary<String, Operation> = [
+    private var operations: Dictionary<String, Operation> = [
         "π" : Operation.Constant(M_PI),
         "e" : Operation.Constant(M_E),
         "√" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation(cos),
-        "*" : Operation.BinaryOperation(multiply),
+//        "*" : Operation.BinaryOperation({(op1 : Double, op2 : Double) -> Double in //클로져 이용 in 추가 및 { 괄호 앞으로 옮김
+//            return op1 * op2
+//        }),
+//        "*" : Operation.BinaryOperation({(op1 , op2) in return op1 * op2}),
+//        "*" : Operation.BinaryOperation({($0 , $1) in return $0 * $1}),
+        //클로저 지리네
+        "*" : Operation.BinaryOperation({ $0 * $1 }),
+        "%" : Operation.BinaryOperation({ $0 / $1 }),
+        "+" : Operation.BinaryOperation({ $0 + $1 }),
+        "-" : Operation.BinaryOperation({ $0 - $1 }),
         "=" : Operation.Equals
     ]
      
     // enum은 메소드를 가질 수 있다. 하지만 변수를 가질 수 없다 .(계산 변수 ㅇ 저장변수 x) 또한 상속도 불가하다.
-    enum Operation {
+    private enum Operation {
         case Constant(Double) //여기서 (double)은 연관값을 말하는데 이게 있어야 값을 받을 수 있음
         case UnaryOperation((Double) -> Double) //이게 단항 연산의 연관 값인 함수임 ((Double) -> Double)
         case BinaryOperation((Double, Double) -> Double)
@@ -32,21 +41,29 @@ class CalculatorBrain{ //base class
     func performOperation(symbol:String){
         if let operation = operations[symbol]{
             switch operation { //왜 여기 switch는 default가 필요 없나 => operation 자체에 값이 4개만 존재하기 떄문에
-                case .Constant(let value): accumulator = value
-                case .UnaryOperation(let funcSqrt): accumulator = funcSqrt(accumulator)
-                case .BinaryOperation(let function): pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
+                case .Constant(let value):
+                    accumulator = value
+                case .UnaryOperation(let funcSqrt):
+                    accumulator = funcSqrt(accumulator)
+                case .BinaryOperation(let function): //function >> 이게 연산기호에 따른 계산 함수를 뜻함 따라서 binaryFunction: function 이게 그 함수임
+                    executePendingBinaryOperation()
+                    pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
                 case .Equals:
-                    if pending != nil {
-                        accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
-                        pending = nil
-                    }
+                    executePendingBinaryOperation()
             }
+        }
+    }
+    
+    private func executePendingBinaryOperation(){ //equals의 기능을 함수로 빼서 x 할때마다 계산이 되는 형식으로 만듦 
+        if pending != nil {
+            accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
+            pending = nil
         }
     }
     
     private var pending: PendingBinaryOperationInfo?
     
-    struct PendingBinaryOperationInfo{
+    private struct PendingBinaryOperationInfo{
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double
     }
@@ -63,5 +80,3 @@ class CalculatorBrain{ //base class
     }
 }
 
-
-//⎷
