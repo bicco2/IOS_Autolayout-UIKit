@@ -37,7 +37,22 @@ class ViewController: UIViewController {
         }
     }
     
-    private var brain = CalculatorBrain() //controller가 model에 말을 거는 것 
+    var savedProgram: CalculatorBrain.PropertyList?
+    
+    @IBAction func save() {
+        savedProgram = brain.program
+    }
+    
+    
+    @IBAction func restore() {
+        if savedProgram != nil{
+            brain.program = savedProgram!
+            displayValue = brain.result
+        }
+    }
+    
+    private var brain = CalculatorBrain() //controller가 model에 말을 거는 것
+    
     
     @IBAction private func performOperation(_ sender: UIButton) {
         if userIsInTheMiddleOfTyping {

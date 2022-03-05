@@ -6,9 +6,11 @@ import Foundation
 
 class CalculatorBrain{ //base class
     private var accumulator: Double = 0.0 //결과 누적 변수
+    private var internalProgram = [Any]()
     
     func setOperand(operand: Double){
         accumulator = operand
+        internalProgram.append(operand)
     }
     
     private var operations: Dictionary<String, Operation> = [
@@ -38,7 +40,8 @@ class CalculatorBrain{ //base class
 
     }
     
-    func performOperation(symbol:String){
+    func performOperation(symbol: String){
+        internalProgram.append(symbol)
         if let operation = operations[symbol]{
             switch operation { //왜 여기 switch는 default가 필요 없나 => operation 자체에 값이 4개만 존재하기 떄문에
                 case .Constant(let value):
@@ -72,6 +75,33 @@ class CalculatorBrain{ //base class
     //1.var operations 에서 어떤 버튼을 누르는 지에 따라 "어떤 기능"을 할지 틀을 만든다 (ex. π 선택)
     //2.enum Operation을 통해 "어떤 기능"이 '뭘 수행'할지 정해준다. (ex. 연관값으로 double을 넘겨줌을 알려줌)
     //3.func performOperation 에서 '뭘 수행'에 대한 상세 코드를 작성 한다. (ex. 그 연관 값을 accumulator 즉 계산기 화면에 설정== 업데이트)
+    
+    typealias PropertyList = Any
+    
+    var program : PropertyList{
+        get{
+            return internalProgram
+        }
+        set{
+            clear()
+            if let arrayOfOps = newValue as? [Any]{
+                for op in arrayOfOps{
+                    if let operand = op as? Double{
+                        setOperand(operand : operand)
+                    }else if let operation = op as? String{
+                        performOperation(symbol : operation)
+                    }
+                }
+            }
+        }
+    }
+    
+    func clear(){
+        accumulator = 0.0
+        pending = nil
+        internalProgram.removeAll()
+    }
+    
     
     var result: Double{
         get{
