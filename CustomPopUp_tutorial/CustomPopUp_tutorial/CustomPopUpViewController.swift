@@ -10,20 +10,31 @@ import UIKit
 
 class CustomPopUpViewController: UIViewController{
     
+    @IBOutlet weak var profileImg: UIImageView!
+    
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var subscribeBtn: UIButton!
     @IBOutlet weak var bgBtn: UIButton!
+    @IBOutlet weak var chatBtn: UIButton!
     
     var subscribeBtnCompletionClosure: (() -> Void )? //아무 행동도 안하지만 발생된건 알려준다 >> 비동기 처리임
+    
+    var myPopUpDelegate : PopUpDelegate? // 이걸로 리모컨 만들고
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("CustomPopUpViewController - viewDidLoad() called")
         
+        profileImg.layer.cornerRadius = 20
+        contentView.layer.cornerRadius = 30
         
         
     }
+    
+    
+    //MARK: - IBActions
     @IBAction func onBgBtnClicked(_ sender: UIButton) {
         print("CustomPopUpViewController - onBgBtnClicked() called")
         
@@ -42,4 +53,13 @@ class CustomPopUpViewController: UIViewController{
             subscribeBtnCompletionClosure()
         }
     }
+    
+    
+    @IBAction func chatBtnClicked(_ sender: UIButton) {
+        print("CustomPopUpViewController - chatBtnClicked () called")
+        myPopUpDelegate?.onChatBtnClicked() //얘로 리모콘 버튼 누름
+        
+    }
+    
+    
 }

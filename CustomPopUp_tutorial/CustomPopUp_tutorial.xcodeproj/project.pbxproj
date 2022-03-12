@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCE6DADF27DCEBFE00175B30 /* PopUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE6DADE27DCEBFE00175B30 /* PopUpDelegate.swift */; };
 		CCF24CD727DB874A00B30EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF24CD627DB874A00B30EBE /* AppDelegate.swift */; };
 		CCF24CD927DB874A00B30EBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF24CD827DB874A00B30EBE /* SceneDelegate.swift */; };
 		CCF24CDB27DB874A00B30EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF24CDA27DB874A00B30EBE /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CCE6DADE27DCEBFE00175B30 /* PopUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDelegate.swift; sourceTree = "<group>"; };
 		CCF24CD327DB874A00B30EBE /* CustomPopUp_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomPopUp_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF24CD627DB874A00B30EBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF24CD827DB874A00B30EBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				CCF24CE127DB874A00B30EBE /* LaunchScreen.storyboard */,
 				CCF24CE427DB874A00B30EBE /* Info.plist */,
 				CCF24CEC27DB90D900B30EBE /* CustomPopUpViewController.swift */,
+				CCE6DADE27DCEBFE00175B30 /* PopUpDelegate.swift */,
 			);
 			path = CustomPopUp_tutorial;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE6DADF27DCEBFE00175B30 /* PopUpDelegate.swift in Sources */,
 				CCF24CED27DB90D900B30EBE /* CustomPopUpViewController.swift in Sources */,
 				CCF24CDB27DB874A00B30EBE /* ViewController.swift in Sources */,
 				CCF24CD727DB874A00B30EBE /* AppDelegate.swift in Sources */,

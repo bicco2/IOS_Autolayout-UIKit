@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIT-hS-lkG" userLabel="contentView">
-                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <rect key="frame" x="82" y="248" width="250" height="400"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myImg" translatesAutoresizingMaskIntoConstraints="NO" id="qMl-Em-NSx">
                                         <rect key="frame" x="65" y="20" width="120" height="120"/>
@@ -38,46 +38,68 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi! i'm bicco!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOb-nK-Y96">
-                                        <rect key="frame" x="73" y="150" width="104" height="21"/>
+                                        <rect key="frame" x="73.5" y="150" width="103.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구독, 좋아요, 알림설정까지!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXu-1i-DCW">
-                                        <rect key="frame" x="32.5" y="181" width="185" height="21"/>
+                                        <rect key="frame" x="32.5" y="180.5" width="185" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGp-vV-3We">
-                                        <rect key="frame" x="87.5" y="244" width="75" height="26"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="subscribe">
-                                            <backgroundConfiguration key="background" cornerRadius="20">
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="10"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="onSubscribeBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RQV-NP-UiG"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SWq-bg-PKh">
+                                        <rect key="frame" x="75" y="313" width="100" height="67"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTp-Gc-Oxk">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="xrK-eJ-rf2"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="KakaoTalk">
+                                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                    </backgroundConfiguration>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="chatBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Tpc-nx-w3w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGp-vV-3We">
+                                                <rect key="frame" x="0.0" y="41" width="100" height="26"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="subscribe">
+                                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="10"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onSubscribeBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RQV-NP-UiG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="qMl-Em-NSx" firstAttribute="centerX" secondItem="xIT-hS-lkG" secondAttribute="centerX" id="1Aj-aF-NBZ"/>
                                     <constraint firstItem="cOb-nK-Y96" firstAttribute="top" secondItem="qMl-Em-NSx" secondAttribute="bottom" constant="10" id="28J-fQ-Wu0"/>
-                                    <constraint firstAttribute="bottom" secondItem="nGp-vV-3We" secondAttribute="bottom" constant="30" id="4Je-lf-Nub"/>
+                                    <constraint firstItem="SWq-bg-PKh" firstAttribute="centerX" secondItem="xIT-hS-lkG" secondAttribute="centerX" id="5LY-Jx-vQF"/>
                                     <constraint firstItem="LXu-1i-DCW" firstAttribute="centerX" secondItem="xIT-hS-lkG" secondAttribute="centerX" id="OfM-vL-x9L"/>
-                                    <constraint firstAttribute="height" constant="300" id="ZvW-xR-JeV"/>
+                                    <constraint firstAttribute="height" constant="400" id="ZvW-xR-JeV"/>
                                     <constraint firstItem="LXu-1i-DCW" firstAttribute="top" secondItem="cOb-nK-Y96" secondAttribute="bottom" constant="10" id="aH3-eV-moG"/>
                                     <constraint firstItem="qMl-Em-NSx" firstAttribute="top" secondItem="xIT-hS-lkG" secondAttribute="top" constant="20" id="fZy-7J-OjR"/>
                                     <constraint firstAttribute="width" constant="250" id="l8Z-jt-Cuh"/>
-                                    <constraint firstItem="nGp-vV-3We" firstAttribute="centerX" secondItem="xIT-hS-lkG" secondAttribute="centerX" id="lva-gb-dZm"/>
                                     <constraint firstItem="cOb-nK-Y96" firstAttribute="centerX" secondItem="xIT-hS-lkG" secondAttribute="centerX" id="qrV-4K-k6C"/>
+                                    <constraint firstAttribute="bottom" secondItem="SWq-bg-PKh" secondAttribute="bottom" constant="20" id="whP-sM-uWD"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -94,7 +116,9 @@
                     </view>
                     <connections>
                         <outlet property="bgBtn" destination="puW-ur-2d7" id="SPL-Oh-5R6"/>
+                        <outlet property="chatBtn" destination="zTp-Gc-Oxk" id="zLC-kR-4Eq"/>
                         <outlet property="contentView" destination="xIT-hS-lkG" id="BuY-si-ktf"/>
+                        <outlet property="profileImg" destination="qMl-Em-NSx" id="2kb-dR-k8S"/>
                         <outlet property="subscribeBtn" destination="nGp-vV-3We" id="OGm-AB-l9d"/>
                     </connections>
                 </viewController>
@@ -113,6 +137,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -8,7 +8,8 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PopUpDelegate {
+    
 
     @IBOutlet weak var createPopUpBtn: UIButton!
     @IBOutlet weak var myWebView: WKWebView!
@@ -59,6 +60,12 @@ class ViewController: UIViewController {
     @IBAction func onBackToHomeBtnClicked(_ sender: UIButton) {
         self.greet.isHidden = false
     }
+    
+    //MARK: - PopUpDelegate methods
+    func onChatBtnClicked() { //PopUpDelegate에서 만든 메소드 자동 연결함
+        print("ViewController - onChatBtnClicked()  called ")
+    }
+
     
 }
 
