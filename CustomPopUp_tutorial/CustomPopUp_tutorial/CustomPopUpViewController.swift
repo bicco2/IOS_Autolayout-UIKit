@@ -14,7 +14,7 @@ class CustomPopUpViewController: UIViewController{
     @IBOutlet weak var subscribeBtn: UIButton!
     @IBOutlet weak var bgBtn: UIButton!
     
-    var subscribeBtnCompletionClosure: (() -> Void )? //아무 행동도 안하지만 발생된건 알려준다
+    var subscribeBtnCompletionClosure: (() -> Void )? //아무 행동도 안하지만 발생된건 알려준다 >> 비동기 처리임
     
     override func viewDidLoad() {
         super.viewDidLoad()
