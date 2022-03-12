@@ -24,6 +24,20 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFG-Ta-hJz" userLabel="HomeBtn">
+                                <rect key="frame" x="175.5" y="50" width="63" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Home">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBackToHomeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaH-gr-FWo"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ele-4V-yvk">
                                 <rect key="frame" x="154.5" y="810" width="105" height="38"/>
                                 <state key="normal" title="Button"/>
@@ -38,20 +52,31 @@
                                     <action selector="onCreatePopUpBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xtr-Hc-Myq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello there!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmn-FU-7A5">
+                                <rect key="frame" x="164" y="438" width="86" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hmn-FU-7A5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9vR-Z6-EOW"/>
                             <constraint firstItem="AFt-Ro-ZKu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Al9-4c-5Gn"/>
                             <constraint firstItem="AFt-Ro-ZKu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IAH-NG-UaE"/>
+                            <constraint firstItem="iFG-Ta-hJz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="NHP-dC-37u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ele-4V-yvk" secondAttribute="bottom" constant="14" id="Pea-gb-A0J"/>
                             <constraint firstItem="ele-4V-yvk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X9k-MO-fji"/>
                             <constraint firstItem="AFt-Ro-ZKu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fHH-Nm-Z0l"/>
+                            <constraint firstItem="hmn-FU-7A5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hiu-YS-bIq"/>
+                            <constraint firstItem="iFG-Ta-hJz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iYU-WQ-OdI"/>
                             <constraint firstItem="AFt-Ro-ZKu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zUs-Wk-4K4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="createPopUpBtn" destination="ele-4V-yvk" id="O0u-F6-cCI"/>
+                        <outlet property="greet" destination="hmn-FU-7A5" id="b4j-QV-rpC"/>
                         <outlet property="myWebView" destination="AFt-Ro-ZKu" id="vTX-6g-ekD"/>
                     </connections>
                 </viewController>
@@ -61,6 +86,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
