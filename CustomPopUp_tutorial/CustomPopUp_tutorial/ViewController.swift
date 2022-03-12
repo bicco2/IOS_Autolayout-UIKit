@@ -51,6 +51,8 @@ class ViewController: UIViewController, PopUpDelegate {
             self.greet.isHidden = true
         }
         
+        customPopUpVC.myPopUpDelegate = self //왜ㅑ 셀프임? 위에 class에 PopUpDelegate 상속해줬으니까  이거 ㅈㄴ 중요함 다시 공부
+        
         //위에서 설정한 alertPopUpVC 를 보여주도록 하는 코드
         self.present(customPopUpVC, animated: true, completion: nil)
         
@@ -64,6 +66,8 @@ class ViewController: UIViewController, PopUpDelegate {
     //MARK: - PopUpDelegate methods
     func onChatBtnClicked() { //PopUpDelegate에서 만든 메소드 자동 연결함
         print("ViewController - onChatBtnClicked()  called ")
+        let myChannelUrl = URL(string: "https://github.com/jinhobyeong")
+        self.myWebView.load(URLRequest(url: myChannelUrl!))
     }
 
     

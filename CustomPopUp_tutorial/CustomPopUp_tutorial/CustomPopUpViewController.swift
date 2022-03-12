@@ -57,7 +57,11 @@ class CustomPopUpViewController: UIViewController{
     
     @IBAction func chatBtnClicked(_ sender: UIButton) {
         print("CustomPopUpViewController - chatBtnClicked () called")
+        
+        
         myPopUpDelegate?.onChatBtnClicked() //얘로 리모콘 버튼 누름
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
     
