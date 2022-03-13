@@ -17,6 +17,8 @@ class CustomPopUpViewController: UIViewController{
     @IBOutlet weak var subscribeBtn: UIButton!
     @IBOutlet weak var bgBtn: UIButton!
     @IBOutlet weak var chatBtn: UIButton!
+    @IBOutlet weak var blogBtn: UIButton!
+    
     
     var subscribeBtnCompletionClosure: (() -> Void )? //아무 행동도 안하지만 발생된건 알려준다 >> 비동기 처리임
     
@@ -42,7 +44,7 @@ class CustomPopUpViewController: UIViewController{
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onSubscribeBtnClicked(_ sender: UIButton) {
+    @IBAction func onSubscribeBtnClicked(_ sender: UIButton) { //🍎컴플레션 블럭 클로져 방식
         print("CustomPopUpViewController - onSubscribeBtnClicked() called")
         
         self.dismiss(animated: true, completion: nil)
@@ -55,15 +57,24 @@ class CustomPopUpViewController: UIViewController{
     }
     
     
-    @IBAction func chatBtnClicked(_ sender: UIButton) {
+    @IBAction func chatBtnClicked(_ sender: UIButton) { //🍎프로토콜 델리겟 방식
         print("CustomPopUpViewController - chatBtnClicked () called")
         
-        
-        myPopUpDelegate?.onChatBtnClicked() //얘로 리모콘 버튼 누름
+        myPopUpDelegate?.onChatBtnClicked() //얘로 리모콘 버튼 누름 뷰컨에서 수신해서 거기서 실행 단 수신기와 연결기 되어있어야한다. 
         
         self.dismiss(animated: true, completion: nil)
         
     }
+    
+    
+    @IBAction func onBlogBtnClicked(_ sender: UIButton) { //🍎노티피케이션 센터 방식
+        print("CustomPopUpViewController - onBlogBtnClicked() called")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: notificatrionName), object: nil)
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
     
     
 }
